@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Simple FLI CCD, focuser and filter wheel management tool"
 HOMEPAGE="https://github.com/eddyem/mytakepic/tree/master/fli_control"
-SRC_URI=""
+SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/fli_control.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -21,10 +21,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
-
-src_unpack() {
-    cp -r /home/eddy/C-files/mytakepic/fli_control/* ${S} || die
-}
 
 CMAKE_USE_DIR="${S}"
 BUILD_DIR=${S} 

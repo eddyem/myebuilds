@@ -5,24 +5,24 @@ EAPI=6
 
 inherit unpacker
 
-DESCRIPTION="FLI CCD SDK"
+DESCRIPTION="Old SLA astronomy calculations library. DEPRECATED! Don't use it in new projects. Use libnova or libsofa instead."
 HOMEPAGE=""
-SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/libfli-1.104.tgz"
+SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/slalib.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="sci-libs/fliusb"
+DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}/libfli-1.104"
+S="${WORKDIR}"
 
 src_install() {
     insinto /usr/local/lib
-    doins libfli.a
+    doins libsla.so
     insinto /usr/local/include
-    doins libfli.h
+    doins slalib.h  slamac.h
     insinto /usr/share/pkgconfig
-    doins fli.pc
+    doins sla.pc
 }

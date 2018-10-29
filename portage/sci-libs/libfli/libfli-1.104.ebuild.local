@@ -7,7 +7,7 @@ inherit unpacker
 
 DESCRIPTION="FLI CCD SDK"
 HOMEPAGE=""
-SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/libfli-1.104.tgz"
+SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -17,6 +17,10 @@ IUSE=""
 DEPEND="sci-libs/fliusb"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}/libfli-1.104"
+
+src_unpack() {
+    tar -zxf /home/eddy/C-files/mytakepic/extern/libfli-1.104.tgz
+}
 
 src_install() {
     insinto /usr/local/lib

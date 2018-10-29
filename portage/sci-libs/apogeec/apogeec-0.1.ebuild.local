@@ -5,22 +5,24 @@ EAPI=6
 
 inherit cmake-utils
 
-DESCRIPTION="Simple ATIK CCD management tool"
-HOMEPAGE="https://github.com/eddyem/atik_control"
-SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/atik_control.tgz"
+DESCRIPTION="libapogee C wrapper"
+HOMEPAGE="https://github.com/eddyem/apogee_control/tree/master/apogee_C_wrapper"
+SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bta png raw"
+IUSE=""
 
 DEPEND="
-    sci-libs/atiksdk
-    sci-libs/cfitsio
-    png? ( media-libs/libpng )
+    sci-libs/libapogee
 "
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
+
+src_unpack() {
+    cp -r /home/eddy/C-files/apogee_control/apogee_C_wrapper/* ${S} || die
+}
 
 CMAKE_USE_DIR="${S}"
 BUILD_DIR=${S} 
@@ -28,9 +30,6 @@ BUILD_DIR=${S}
 src_configure() {
     local mycmakeargs=(
 	"-DCMAKE_INSTALL_PREFIX=/usr/local"
-	"-DUSE_BTA=$(usex bta)"
-	"-DUSE_PNG=$(usex png)"
-	"-DUSE_RAW=$(usex raw)"
     )
      cmake-utils_src_configure
 }

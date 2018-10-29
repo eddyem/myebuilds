@@ -7,7 +7,7 @@ inherit unpacker
 
 DESCRIPTION="ATIK CCD SDK"
 HOMEPAGE="https://sourceforge.net/projects/linguider/files/atik_sdk/"
-SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/atikccdsdk-1.15-amd64.deb"
+SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
 src_unpack() {
-    unpack_deb ${A}
+    unpack_deb /home/eddy/C-files/libatikccd/atikccdsdk-1.15-amd64.deb
 }
 
 src_install() {

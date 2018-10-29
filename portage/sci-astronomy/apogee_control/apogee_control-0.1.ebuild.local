@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Simple Apogee CCD management tool"
 HOMEPAGE="https://github.com/eddyem/apogee_control"
-SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/apogee_control.tgz"
+SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -24,6 +24,14 @@ DEPEND="
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
+APD="/home/eddy/C-files/apogee_control"
+
+src_unpack() {
+    cp  ${APD}/*.{c,h,txt,cmake}  ${S} || die
+    cp -r ${APD}/image_view_module ${S} || die
+    cp -r ${APD}/locale ${S} || die
+}
+
 CMAKE_USE_DIR="${S}"
 BUILD_DIR=${S} 
 
@@ -35,6 +43,7 @@ src_configure() {
 	"-DUSE_RAW=$(usex raw)"
 	"-DUSE_IMAGEVIEW=$(usex imview)"
     )
+    #cmake ${mycmakeargs} .
     cmake-utils_src_configure
 }
 
