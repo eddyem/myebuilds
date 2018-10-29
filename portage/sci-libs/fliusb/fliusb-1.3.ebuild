@@ -7,7 +7,7 @@ inherit linux-info linux-mod
 
 DESCRIPTION="FLI USB kernel module"
 HOMEPAGE=""
-SRC_URI=""
+SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/fliusb.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -18,22 +18,16 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
 
-MODULE_NAMES="fliusb(misc:fliusb:fliusb)"
+MODULE_NAMES="fliusb(misc::)"
 BUILD_TARGETS='default'
 
-src_unpack() {
-    cd ${S}
-    tar -zvxf /home/eddy/C-files/mytakepic/extern/fliusb.tgz
-}
-
 src_compile() {
-    cd ${S}/fliusb
+#    cd ${S}
     linux-mod_src_compile
 }
 
 src_install() {
     linux-mod_src_install
-    pushd /home/eddy/C-files/mytakepic/extern
     insinto /lib/udev/rules.d
     doins fliusb.rules
 }

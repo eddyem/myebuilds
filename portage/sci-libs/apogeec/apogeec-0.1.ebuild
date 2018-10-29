@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="libapogee C wrapper"
 HOMEPAGE="https://github.com/eddyem/apogee_control/tree/master/apogee_C_wrapper"
-SRC_URI=""
+SRC_URI="https://github.com/eddyem/myebuilds/raw/master/distfiles/apogeec.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,10 +19,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"
-
-src_unpack() {
-    cp -r /home/eddy/C-files/apogee_control/apogee_C_wrapper/* ${S} || die
-}
 
 CMAKE_USE_DIR="${S}"
 BUILD_DIR=${S} 
