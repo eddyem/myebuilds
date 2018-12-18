@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S="${WORKDIR}"
+S="${WORKDIR}/libsnippets"
 
 CMAKE_USE_DIR="${S}"
 BUILD_DIR=${S} 
