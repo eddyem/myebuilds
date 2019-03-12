@@ -16,6 +16,7 @@ IUSE="cuda leptonica gsl"
 
 DEPEND="
     virtual/opengl
+    media-libs/freeglut
     x11-libs/gtkglext
     sci-libs/cfitsio
     sci-libs/fftw
