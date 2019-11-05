@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Very simple FITS visualisation tool"
 HOMEPAGE="https://github.com/eddyem/fits_filter"
-SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/distfiles/fitsview.tgz"
+SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/fitsview.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"

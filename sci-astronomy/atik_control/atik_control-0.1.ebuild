@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Simple ATIK CCD management tool"
 HOMEPAGE="https://github.com/eddyem/atik_control"
-SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/distfiles/atik_control.tgz"
+SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/atik_control.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"

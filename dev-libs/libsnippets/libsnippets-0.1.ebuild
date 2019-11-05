@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Snippets library"
 HOMEPAGE="https://github.com/eddyem/eddys_snippets"
-SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/distfiles/libsnippets.tgz"
+SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/libsnippets.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
