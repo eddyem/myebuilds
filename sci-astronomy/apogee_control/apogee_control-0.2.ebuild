@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="bta png raw imview"
 
 DEPEND="
+    dev-libs/libusb-compat
     bta? ( sci-astronomy/sofa_c )
     png? ( media-libs/libpng )
     sci-libs/libapogee
