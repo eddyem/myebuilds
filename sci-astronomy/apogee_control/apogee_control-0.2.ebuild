@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="Simple Apogee CCD management tool"
 HOMEPAGE="https://github.com/eddyem/apogee_control"
-SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/apogee_control.tgz"
+SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/apogee_control-0.2.0.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
