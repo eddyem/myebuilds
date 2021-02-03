@@ -7,7 +7,7 @@ inherit linux-info linux-mod
 
 DESCRIPTION="FLI USB kernel module"
 HOMEPAGE=""
-SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/fliusb-1.3.tgz"
+SRC_URI="https://github.com/eddyem/mydistfiles/raw/master/fliusb.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -22,6 +22,7 @@ MODULE_NAMES="fliusb(misc::)"
 BUILD_TARGETS='default'
 
 src_compile() {
+#    cd ${S}
     linux-mod_src_compile
 }
 
